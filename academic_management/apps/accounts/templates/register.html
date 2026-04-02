@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Register - AcademiX{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="grid-split">
+    <!-- Left: Form -->
+    <div class="card p-4 p-md-5">
+      <h2 class="mb-4 fw-bold">Create Account</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control input-field" name="first_name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control input-field" name="last_name" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control input-field" name="email" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Role</label>
+            <select class="form-select input-field" name="role" required>
+              <option value="teacher">Instructor / Teacher</option>
+              <option value="student">Student</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control input-field" name="password" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control input-field" name="confirm_password" required>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-accent w-100 py-2 fw-bold">Create Account</button>
+          </div>
+        </div>
+      </form>
+      <p class="mt-4 text-center">Already registered? <a href="{% url 'login' %}" class="text-accent fw-bold">Login here</a></p>
+    </div>
+
+    <!-- Right: Branding -->
+    <div class="d-none d-md-block p-4 rounded" style="background: linear-gradient(135deg, var(--clr-green), var(--clr-blue)); color: white;">
+      <h1 class="display-4 fw-bold mb-3">Join the Network</h1>
+      <p class="lead mb-4">Streamline your academic workflow. Connect with students, automate grading, and reclaim your time.</p>
+      <div class="d-flex gap-3 mt-4">
+        <span class="badge bg-white text-dark p-2">✓ 24/7 Support</span>
+        <span class="badge bg-white text-dark p-2">✓ Data Privacy</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
