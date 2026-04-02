@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}AcademiX - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-gradient">
+  <div class="container text-center position-relative z-1">
+    <h1 class="display-3 fw-bold mb-3">The Academic Lifeline for Modern Educators</h1>
+    <p class="lead mx-auto mb-4" style="max-width: 700px;">
+      Tired of administrative overload, fragmented grading systems, and endless paperwork? 
+      AcademiX centralizes your workflow so you can focus on what truly matters: <span class="text-warning fw-bold">teaching</span>.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="{% url 'register' %}" class="btn btn-accent btn-lg px-4 py-2">Get Started Free</a>
+      <a href="#features" class="btn btn-outline-light btn-lg px-4 py-2">See How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- How It Rescues Teachers -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-2">Why Teachers Choose AcademiX</h2>
+    <p class="text-center text-muted mb-5">Built by educators, for educators. We automate the busywork.</p>
+    
+    <div class="grid-3">
+      <div class="card p-4">
+        <div class="card-icon bg-light text-danger">📝</div>
+        <h4 class="fw-bold">Automated Grading & Rubrics</h4>
+        <p class="text-muted">Stop spending weekends grading. Upload assignments, set rubrics, and let our AI-assisted engine handle the bulk scoring instantly.</p>
+      </div>
+      <div class="card p-4">
+        <div class="card-icon bg-light text-warning">📊</div>
+        <h4 class="fw-bold">Real-Time Attendance & Analytics</h4>
+        <p class="text-muted">Track participation, flag at-risk students early, and generate compliance-ready reports with one click. No more manual spreadsheets.</p>
+      </div>
+      <div class="card p-4">
+        <div class="card-icon bg-light text-success">💬</div>
+        <h4 class="fw-bold">Unified Communication Hub</h4>
+        <p class="text-muted">Ditch email chains. Message students, parents, and staff in organized channels. Schedule announcements and track read receipts.</p>
+      </div>
+    </div>
+
+    <div class="teacher-rescue p-4 mt-5 rounded">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h3 class="fw-bold mb-2">🚨 The "Rescue" You've Been Waiting For</h3>
+          <p class="mb-0">Teachers burn out because of administrative friction, not teaching itself. AcademiX cuts grading time by <span class="fw-bold text-success">65%</span>, eliminates duplicate data entry, and gives you back an average of <span class="fw-bold text-accent">8 hours per week</span>. Reclaim your evenings, reduce stress, and bring the joy back to the classroom.</p>
+        </div>
+        <div class="col-md-4 text-center mt-3 mt-md-0">
+          <a href="{% url 'register' %}" class="btn btn-primary px-4 py-2">Start Your Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Grid -->
+<section id="features" class="py-5" style="background: var(--clr-light);">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Powerful Modules, Simple Interface</h2>
+    <div class="grid-2-features">
+      <div class="d-flex gap-3 p-3 bg-white rounded shadow-sm">
+        <span class="fs-3 text-primary">📅</span>
+        <div>
+          <h5 class="fw-bold">Smart Scheduling</h5>
+          <p class="text-muted mb-0">Auto-resolve room conflicts, sync with personal calendars, and send push reminders.</p>
+        </div>
+      </div>
+      <div class="d-flex gap-3 p-3 bg-white rounded shadow-sm">
+        <span class="fs-3" style="color: var(--clr-orange);">📚</span>
+        <div>
+          <h5 class="fw-bold">Resource Library</h5>
+          <p class="text-muted mb-0">Version-controlled lesson plans, shared drives, and curriculum mapping tools.</p>
+        </div>
+      </div>
+      <div class="d-flex gap-3 p-3 bg-white rounded shadow-sm">
+        <span class="fs-3" style="color: var(--clr-red);">🛡️</span>
+        <div>
+          <h5 class="fw-bold">FERPA-Compliant Security</h5>
+          <p class="text-muted mb-0">End-to-end encryption, role-based access, and automated audit logs.</p>
+        </div>
+      </div>
+      <div class="d-flex gap-3 p-3 bg-white rounded shadow-sm">
+        <span class="fs-3" style="color: var(--clr-yellow);">📱</span>
+        <div>
+          <h5 class="fw-bold">Mobile-Ready Portal</h5>
+          <p class="text-muted mb-0">Grade on the go, reply to parents, and approve leave requests from your phone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center bg-dark text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready to Transform Your Teaching Experience?</h2>
+    <p class="mb-4 opacity-75">Join 50,000+ educators who've stopped managing paperwork and started inspiring minds.</p>
+    <a href="{% url 'register' %}" class="btn btn-accent btn-lg px-5 py-2">Create Your Account</a>
+  </div>
+</section>
+{% endblock %}

@@ -8,7 +8,10 @@ from django.conf import settings
 from django.utils.http import urlsafe_base64_decode
 from django.utils.encoding import force_bytes
 from django.contrib.auth.tokens import default_token_generator
-from .models import User
+# from .models import User
+from django.contrib.auth import get_user_model
+
+User = get_user_model() # This now references your custom User
 
 def register_view(request):
     if request.method == "POST":
