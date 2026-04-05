@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('apps.accounts.urls')),
     path('', include('apps.accounts.urls')),
-    # path('dashboard/', include('apps.dashboard.urls')),
+    path('dashboard/', include('apps.dashboard.urls')),
     # path('grading/', include('apps.grading.urls')),
     # path('notifications/', include('apps.notifications.urls')),
     # path('students/', include('apps.students.urls')),

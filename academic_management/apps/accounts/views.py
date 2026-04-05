@@ -37,7 +37,7 @@ def register_view(request):
     else:
         form = CustomUserCreationForm()
     
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 def verify_email(request, uidb64, token):
     try:
@@ -114,11 +114,23 @@ def login_view(request):
         else:
             messages.error(request, "Invalid username or password.")
 
-    return render(request, 'login.html')
+    return render(request, 'dashboard.html')
+
+# @login_required
+def home_view(request):
+    return render(request, 'home.html')
 
 @login_required
-def home_view(request):
-    return render(request, 'templates/home.html')
+def dashboard_view(request):
+    return render(request, 'accounts/dashboard.html')
+
+@login_required
+def student_list_view(request):
+    return render(request, 'accounts/student_list.html')
+
+@login_required
+def grading_view(request):
+    return render(request, 'accounts/grading.html')
 
 def user_logout(request):
     from django.contrib.auth import logout

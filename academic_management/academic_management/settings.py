@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'apps.students',
     # 'axes',
     # 'captcha',
-    'rest_framework',
     'rest_framework_simplejwt',
 ]
 
