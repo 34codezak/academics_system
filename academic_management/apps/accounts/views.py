@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.utils.http import urlsafe_base64_decode
@@ -15,7 +16,7 @@ User = get_user_model() # This now references your custom User
 
 def register_view(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = False # Deactivate until email is verified
@@ -34,9 +35,9 @@ def register_view(request):
             messages.error(request, 'Please correct the errors below.')
 
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'login.html', {'form': form})
 
 def verify_email(request, uidb64, token):
     try:

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.students',
     # 'axes',
     # 'captcha',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -83,8 +84,14 @@ WSGI_APPLICATION = 'academic_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'academics_ms',
+        'USER': 'aadmin',
+        'PASSWORD': 'bb1tIbim',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
