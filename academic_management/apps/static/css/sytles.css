@@ -1,11 +1,11 @@
 :root {
   --clr-black: #0f172a;
-  --clr-orange: #f97316;
+  --clr-orange: #f04500;
   --clr-green: #22c55e;
-  --clr-red: #ef4444;
+  --clr-red: #f00000;
   --clr-yellow: #eab308;
   --clr-blue: #3b82f6;
-  --clr-white: #ffffff;
+  /*--clr-white: #ffffff;*/
   --clr-light: #f8fafc;
   --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1);
   --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.15);
@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--clr-light);
+  background: linear-gradient(to right, rgb(89, 89, 234), #004);
   color: var(--clr-black);
   line-height: 1.6;
 }
@@ -47,23 +47,33 @@ body {
   border: none;
   transition: all 0.3s ease;
 }
-.btn-primary:hover { background: var(--clr-black); transform: translateY(-2px); }
+
+.btn-primary:hover { 
+  background: var(--clr-black); 
+  transform: translateY(-2px); 
+}
 
 .btn-accent {
   background: var(--clr-orange);
   border: none;
   transition: all 0.3s ease;
 }
-.btn-accent:hover { background: var(--clr-green); transform: translateY(-2px); }
+
+.btn-accent:hover { background: var(--clr-green); 
+  transform: translateY(-2px); 
+}
 
 .card {
   border: none;
   border-radius: var(--radius);
-  background: var(--clr-white);
+  background: #ccc;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+
+.card:hover {
+   transform: translateY(-5px); 
+   box-shadow: var(--shadow-md); }
 
 .card-icon {
   width: 50px;
@@ -89,7 +99,7 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, var(--clr-black) 0%, var(--clr-blue) 100%);
+  background: linear-gradient(135deg, rgb(89, 89, 234), rgb(26, 26, 207) 100%);
   color: var(--clr-white);
   padding: 5rem 0;
   position: relative;
@@ -108,14 +118,25 @@ body {
 }
 
 .teacher-rescue {
-  background: var(--clr-white);
-  border-left: 5px solid var(--clr-green);
+  background: #ccc;
+  border-left: var(--clr-green);
 }
 
-.text-accent { color: var(--clr-orange); }
-.text-success { color: var(--clr-green); }
-.text-warning { color: var(--clr-yellow); }
-.text-danger { color: var(--clr-red); }
+.text-accent { 
+  color: var(--clr-orange); 
+}
+
+.text-success { 
+  color: var(--clr-green); 
+}
+
+.text-warning { 
+  color: var(--clr-yellow); 
+}
+
+.text-danger { 
+  color: var(--clr-red); 
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

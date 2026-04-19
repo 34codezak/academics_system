@@ -1,4 +1,8 @@
 *.env
 .env
 /env
-
+*node__modules
+/node__modules
+package-lock.json
+package.json
+db.sqlite3

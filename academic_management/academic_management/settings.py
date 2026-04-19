@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # 'axes',
     # 'captcha',
     'rest_framework_simplejwt',
+    'bootstrap5',
 ]
 
 REST_FRAMEWORK = {
